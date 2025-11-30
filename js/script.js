@@ -1,450 +1,331 @@
-const butao01 = document.querySelector("#exer01")
-const butao02 = document.querySelector("#exer02")
-const butao03 = document.querySelector("#exer03")
-const butao04 = document.querySelector("#exer04")
-const butao05 = document.querySelector("#exer05")
-const butao06 = document.querySelector("#exer06")
-const butao07 = document.querySelector("#exer07")
-const butao08 = document.querySelector("#exer08")
-const butao09 = document.querySelector("#exer09")
-const butao10 = document.querySelector("#exer10")
-const butao11 = document.querySelector("#exer11")
-const butao12 = document.querySelector("#exer12")
-const butao13 = document.querySelector("#exer13")
-const butao14 = document.querySelector("#exer14")
-const butao15 = document.querySelector("#exer15")
-const butao16 = document.querySelector("#exer16")
-const butao17 = document.querySelector("#exer17")
-const butao18 = document.querySelector("#exer18")
-const butao19 = document.querySelector("#exer19")
-const butao20 = document.querySelector("#exer20")
-const res = document.querySelector('.res')
+const btnEx01 = document.querySelector("#ex01")
+const btnEx02 = document.querySelector("#ex02")
+const btnEx03 = document.querySelector("#ex03")
+const btnEx04 = document.querySelector("#ex04")
+const btnEx05 = document.querySelector("#ex05")
+const btnEx06 = document.querySelector("#ex06")
+const btnEx07 = document.querySelector("#ex07")
+const btnEx08 = document.querySelector("#ex08")
+const btnEx09 = document.querySelector("#ex09")
+const btnEx10 = document.querySelector("#ex10")
+const btnEx11 = document.querySelector("#ex11")
+const btnEx12 = document.querySelector("#ex12")
+const btnEx13 = document.querySelector("#ex13")
+const btnEx14 = document.querySelector("#ex14")
+const btnEx15 = document.querySelector("#ex15")
+const btnEx16 = document.querySelector("#ex16")
+const btnEx17 = document.querySelector("#ex17")
+const btnEx18 = document.querySelector("#ex18")
+const btnEx19 = document.querySelector("#ex19")
+const btnEx20 = document.querySelector("#ex20")
 
-function limparDiv() {
-    res.innerHTML = " "
+function ex01() {
+    let idade = parseInt(prompt("Digite sua Idade : "));
+    if (idade >= 18) {
+        alert("Você é maior de Idade")
+    } else {
+        alert("Você é menor de Idade")
+    }
 }
+btnEx01.addEventListener('click', ex01)
 
-function exercicio01() {
-    limparDiv()
-    /* Escreva um programa que leia a idade de uma pessoa e exiba uma mensagem dizendo se ela é maior de idade ou menor de idade. */
+function ex02() {
+    let nome = prompt("Digite seu Nome: ")
+    let idade = parseInt(prompt("Digite sua idade " + nome + " : "))
 
-    let idade = parseInt(prompt("Digite sua idade"))
-    let mensagem = (idade < 18) ? "Menor de idade" : "Maior de idade"
+    let nome02 = prompt("Digite seu Nome: ")
+    let idade02 = parseInt(prompt("Digite sua idade " + nome02 + " : "))
 
-    res.innerHTML = mensagem
-
+    if (idade > idade02) {
+        alert(nome + " é a pessoa mais velha.")
+    } else if (idade02 > idade) {
+        alert(nome02 + " é a pessoa mais velha.")
+    } else {
+        alert("As duas pessoas tem a mesma idade. ")
+    }
 }
+btnEx02.addEventListener('click', ex02)
 
-butao01.addEventListener('click', exercicio01)
-
-function exercicio02() {
-    limparDiv()
-    /* Faça um programa que leia o nome e a idade de duas pessoas e exiba uma mensagem indicando quem é a pessoa mais velha. */
-
-    let nome01 = prompt("Digite o primeiro nome: ")
-    let idade01 = parseInt(prompt("Digte a primeira idade: "))
-    let nome02 = prompt("Digite o segundo nome: ")
-    let idade02 = parseInt(prompt("Digte a segunda idade: "))
-
-    let mensagem = (idade01 > idade02) ? `nome ${nome01}, idade ${idade01} é a mais velha.` : ` nome ${nome02}, idade ${idade02} é a mais velha.`
-
-    res.innerHTML = mensagem
-}
-
-butao02.addEventListener('click', exercicio02)
-
-butao03.addEventListener('click', () => {
-
-    limparDiv()
-
-    /* Faça um programa que verifique se um número é positivo, negativo ou zero. */
-
-    let numero = parseInt(prompt("Digite um número: "))
+function ex03() {
+    let numero = parseInt(prompt("Digite um número : "))
 
     if (numero > 0) {
-        res.innerHTML = ("Número positivo")
+        alert(numero + " O número é positivo ")
+    } else if (numero < 0) {
+        alert(numero + " O número é negativo ")
+    } else {
+        alert(numero + " O número é Zero ")
     }
+}
+btnEx03.addEventListener('click', ex03)
 
-    else if (numero == 0) {
-        res.innerHTML = ("Número 0")
+function ex04() {
+    let idade = parseInt(prompt("Digite sua idade : "))
+
+    if (idade <= 10) {
+        alert(idade + " você é uma criança ")
+    } else if (idade <= 18) {
+        alert(idade + " você é um adolecente ")
+    } else if (idade <= 59) {
+        alert(idade + " você é um adulto ")
+    } else {
+        alert(idade + " você é um idoso ")
     }
+}
+btnEx04.addEventListener('click', ex04)
 
-    else {
-        res.innerHTML = ("Número negativo")
+function ex05() {
+    let numero = parseInt(prompt("Digite um número : "))
+    let numero02 = parseInt(prompt("Digite um número : "))
+
+    if (numero > numero02) {
+        alert(" O " + numero + " é o maior número ")
+    } else if (numero02 > numero) {
+        alert(" O " + numero02 + " é o maior número ")
+    } else {
+        alert(" Os número são iguais ")
     }
+}
+btnEx05.addEventListener('click', ex05)
 
-})
+function ex06() {
+    let nota = parseInt(prompt("Digite a sua primeira nota : "))
+    let nota02 = parseInt(prompt("Digite a sua segunda nota : "))
+    let nota03 = parseInt(prompt("Digite a sua terceira nota : "))
 
-butao04.addEventListener('click', () => {
-
-    limparDiv()
-
-    /*  Escreva um programa que leia a idade de uma pessoa e exiba uma mensagem indicando se ela é criança, adolescente, adulto ou idoso. (Pesquisar uma tabela) */
-
-    let idade = parseInt(prompt("Digite sua idade: "))
-
-    if (idade < 12) {
-        res.innerHTML = ("Criança")
-    }
-
-    else if (idade < 18) {
-        res.innerHTML = ("Adolescente")
-    }
-
-    else if (idade < 60) {
-        res.innerHTML = ("Adulto")
-    }
-
-    else {
-        res.innerHTML = ("Idoso")
-    }
-
-
-})
-
-butao05.addEventListener('click', () => {
-
-    limparDiv()
-
-    /* Crie um programa que leia dois números inteiros e exiba o maior deles. */
-
-    let numero01 = Number(prompt("Digite o primeiro número: "))
-    let numero02 = Number(prompt("Digite o segundo número: "))
-
-    if (numero01 > numero02) {
-        res.innerHTML = (`${numero01}, ${numero02}`)
-    }
-
-    else {
-        res.innerHTML = (`${numero02}, ${numero01}`)
-    }
-})
-
-butao06.addEventListener('click', () => {
-
-    limparDiv()
-
-    /* Faça um programa que receba três notas de um aluno e exiba se ele foi aprovado ou reprovado. A média para aprovação é 7. */
-
-    let nota01 = Number(prompt("Digite a primeira nota :"))
-    let nota02 = Number(prompt("Digite a segunda nota :"))
-    let nota03 = Number(prompt("Digite a terceira nota :"))
-
-    let soma = nota01 + nota02 + nota03
-
-    let media = soma / 3
+    let media = (nota + nota02 + nota03) / 3
 
     if (media >= 7) {
-        res.innerHTML = (`Aprovado sua média é ${media}`)
+        alert(media + " você foi aprovado. ")
+    } else {
+        alert(media + " você foi reprovado. ")
     }
+}
+btnEx06.addEventListener('click', ex06)
 
-    else {
-        res.innerHTML = (`Reprovado sua média é ${media}`)
-    }
-
-
-
-})
-
-butao07.addEventListener('click', () => {
-
-    limparDiv()
-
-    /* Escreva um programa que leia um número inteiro e exiba se ele é par ou ímpar. */
-
-    let numero = parseInt(prompt("Digite seu número: "))
+function ex07() {
+    let numero = parseInt(prompt("Digite um número"))
 
     if (numero % 2 == 0) {
-        res.innerHTML = ("Número par.")
+        alert(numero + " o número digitado é par")
+    } else {
+        alert(numero + " o número digitado é impar")
+    }
+}
+btnEx07.addEventListener('click', ex07)
+
+function ex08() {
+    let salario = parseFloat(prompt("Digite o salário do funcionário: "))
+
+    let bonus;
+
+    if (salario > 2000) {
+        bonus = salario * 0.10
+    } else {
+        bonus = salario * 0.05;
     }
 
-    else {
-        res.innerHTML = ("Número ímpar")
-    }
-})
+    alert("O bônus do funcionário é de: R$" + bonus)
+}
+btnEx08.addEventListener('click', ex08)
 
-butao08.addEventListener('click', () => {
-    /* Faça um programa que receba o salário de um funcionário e exiba o valor do seu bônus. Se o salário for maior que R$ 2000, o bônus é de 10%, caso contrário, é de 5%. */
+function ex09() {
 
-    let salario = parseFloat(prompt("Digite o valor do seu salário: "))
-    let bonus = 0
-    let porcentagemBonus = 0
+    const meses = {
+        janeiro: 31,
+        fevereiro: 28,
+        março: 31,
+        abril: 30,
+        maio: 31,
+        junho: 30,
+        julho: 31,
+        agosto: 31,
+        setembro: 30,
+        outubro: 31,
+        novembro: 30,
+        dezembro: 31
+    };
 
-    if (salario < 2000) {
-        porcentagemBonus = 5 / 100
-    }
+    const mes = prompt("Digite o nome do mês:").toLowerCase().trim();
 
-    else {
-        porcentagemBonus = 10 / 100
-    }
-
-    bonus = salario * porcentagemBonus
-
-    res.innerHTML = (`Seu salário é de ${salario} e seu bonus é de ${bonus}`)
-})
-
-butao09.addEventListener('click', () => {
-
-    limparDiv()
-
-    /* Escreva um programa que leia o nome de um mês e exiba a quantidade de dias que ele possui. Considere apenas meses válidos. */
-
-    let nomeMes = prompt("Digite o nome do mês: ")
-    let nomeMesGrande = nomeMes.toUpperCase()
-
-    if (nomeMesGrande == "JANEIRO" || nomeMesGrande == "MARÇO" || nomeMesGrande == "MAIO" || nomeMesGrande == "JULHO" || nomeMesGrande == "AGOSTO" || nomeMesGrande == "OUTUBRO" || nomeMesGrande == "DEZEMBRO") {
-        res.innerHTML = (`Mês ${nomeMes} e tem 31 Dias.`)
+    if (meses.hasOwnProperty(mes)) {
+        alert(`O mês de ${mes.charAt(0).toUpperCase() + mes.slice(1)} tem ${meses[mes]} dias.`);
+    } else {
+        alert("Mês inválido.");
     }
 
-    else if (nomeMesGrande == "ABRIL" || nomeMesGrande == "JUNHO" || nomeMesGrande == "SETEMBRO" || nomeMesGrande == "NOVEMBRO") {
-        res.innerHTML = (`Mês ${nomeMes} e tem 30 Dias.`)
+
+}
+btnEx09.addEventListener('click', ex09)
+
+function ex10() {
+    let numero = parseInt(prompt("Digite um número : "))
+    let numero02 = parseInt(prompt("Digite um outro número : "))
+    let numero03 = parseInt(prompt("Digite mais um número : "))
+
+    let numeros = [numero, numero02, numero03];
+
+    numeros.sort(function (a, b) {
+        return a - b;
+    });
+
+    alert("Números em ordem crescente: " + numeros.join(", "));
+}
+btnEx10.addEventListener('click', ex10)
+
+function ex11() {
+    let faltas = parseInt(prompt("Digite o número de faltas do aluno"))
+
+    if (faltas > 15) {
+        alert("aluno reprovado por faltas")
+    } else {
+        alert("aluno aprovado quanto as faltas")
     }
+}
+btnEx11.addEventListener('click', ex11)
 
-    else if (nomeMesGrande == "FEVEREIRO") {
-        res.innerHTML = (`Mês ${nomeMes} e tem 28 ou 29 Dias.`)
+function ex12() {
+    const precos = {
+        1: 10.00,
+        2: 2.50,
+        3: 5.00,
+        4: 27.80
+    };
+
+    let codigo = parseInt(prompt("Digite o codigo do produto : "))
+    let quantidade = parseInt(promt("Digite a quantidade dos produtos"))
+
+    if (precos[codigo] !== undefined) {
+        let total = precos[codigo] * quantidade;
+        alert(`Valor total a pagar: R$ ${total.toFixed(2)}`);
+    } else {
+        alert("Código de produto inválido.");
     }
+}
+btnEx12.addEventListener('click', ex12)
 
-    else {
-        res.innerHTML = ("Mês digitado inválido.")
-    }
-})
+function ex13() {
+    let idade = parseInt(prompt("Digite sua idade:"));
+    let sexo = prompt("Digite seu sexo (M para masculino ou F para feminino):");
+    sexo = sexo.toUpperCase();
 
-butao10.addEventListener('click', () => {
-
-    limparDiv()
-    /*Crie um programa que leia três números inteiros e exiba-os em ordem crescente. */
-
-    let numero01 = parseInt(prompt("Digite o primeiro número: "))
-    let numero02 = parseInt(prompt("Digite o segundo número: "))
-    let numero03 = parseInt(prompt("Digite o terceiro número: "))
-
-    if (numero01 < numero02 && numero01 < numero03) {
-
-        if (numero02 < numero03) {
-            res.innerHTML = (`${numero01}, ${numero02}, ${numero03}`)
+    if (sexo === "M") {
+        if (idade >= 65) {
+            alert("Você pode se aposentar.");
+        } else {
+            alert("Você ainda não pode se aposentar.");
         }
-
-        else {
-            res.innerHTML = (`${numero01}, ${numero03}, ${numero02}`)
+    } else if (sexo === "F") {
+        if (idade >= 60) {
+            alert("Você pode se aposentar.");
+        } else {
+            alert("Você ainda não pode se aposentar.");
         }
+    } else {
+        alert("Sexo inválido. Digite 'M' para masculino ou 'F' para feminino.");
     }
+}
+btnEx13.addEventListener('click', ex13)
 
-    else if (numero02 < numero01 && numero02 < numero03) {
-
-        if (numero01 < numero03) {
-
-            res.innerHTML = (`${numero02}, ${numero01}, ${numero03}`)
-        }
-
-        else {
-            res.innerHTML = (`${numero02}, ${numero03}, ${numero01}`)
-        }
-    }
-
-    else {
-
-        if (numero01 < numero02) {
-            res.innerHTML = (`${numero03}, ${numero01}, ${numero02}`)
-        }
-
-        else {
-            res.innerHTML = (`${numero03}, ${numero02}, ${numero01}`)
-        }
-    }
-
-})
-
-butao11.addEventListener('click', () => {
-
-    limparDiv()
-
-    /* Faça um programa que leia o número de faltas de um aluno em uma disciplina e exiba sua situação. Se o número de faltas for maior que 15, ele é reprovado por falta. */
-
-    let totalFaltas = parseInt(prompt("Digite a quantidade de falta de um aluno: "))
-
-    if (totalFaltas > 15) {
-        res.innerHTML = ("Reprovado")
-    }
-
-    else {
-        res.innerHTML = ("Aprovado")
-    }
-})
-
-butao12.addEventListener('click', () => {
-
-    limparDiv()
-
-    /* Escreva um programa que leia o código de um produto e a quantidade comprada, e exiba o valor total a ser pago. Considere que cada produto tem um preço diferente. */
-
-    res.innerHTML = ("Codigo da maça é 123456 e o preço da unidade é R$2,00")
-    res.innerHTML = ("Codigo da melancia é 1234567 e o preço da unidade é R$4,00")
-
-    let codigoProduto = parseInt(prompt("Digite o código do produto: "))
-    let quantidadeComprada = parseInt(prompt("Digite a quantidade que deseja: "))
-
-    let preco = 0
-
-    if (codigoProduto == 123456) {
-        preco = 2
-        res.innerHTML = (`Você comprou ${quantidadeComprada} maças é deu ${preco * quantidadeComprada}`)
-    }
-
-    else if (codigoProduto == 1234567) {
-        preco = 4
-        res.innerHTML = (`Você comprou ${quantidadeComprada} melancias é deu ${preco * quantidadeComprada}`)
-    }
-
-    else {
-        res.innerHTML = ("Codigo inválido.")
-    }
-
-})
-
-butao13.addEventListener('click', () => {
-
-    limparDiv()
-
-    /* Crie um programa que leia a idade de uma pessoa e seu sexo (M ou F) e exiba uma mensagem indicando se ela pode ou não se aposentar. Homens podem se aposentar com 65 anos ou mais, e mulheres com 60 anos ou mais.
- */
-
-    let idade = parseInt(prompt("Digite sua idade: "))
-    let sexo = prompt("Digite seu sexo (M/F): ")
-    let sexoGrande = sexo.toUpperCase()
-
-    if (idade >= 65 && sexoGrande == "M") {
-        res.innerHTML = ("Pode se aposentar")
-    }
-
-    else if (idade >= 60 && sexoGrande == "F") {
-        res.innerHTML = ("Pode se aposentar")
-    }
-
-    else {
-        res.innerHTML = ("Não pode se aposentar")
-    }
-
-})
-
-butao14.addEventListener('click', () => {
-
-    limparDiv()
-
-    /* Faça um programa que leia o peso e a altura de uma pessoa e exiba o seu Índice de Massa Corporal (IMC) e a sua classificação. Considere a tabela de classificação do IMC. */
-
-    let peso = parseFloat(prompt("Digite seu peso: "))
-    let altura = parseFloat(prompt("Digite sua altura: "))
+function ex14() {
+    let peso = parseFloat(prompt("Digite seu peso : "))
+    let altura = parseFloat(prompt("Digite a sua altura : "))
 
     let imc = peso / (altura * altura)
 
-    alert(`Seu IMC é de ${imc.toFixed(2)}`)
-
-})
-
-butao15.addEventListener('click', () => {
-    /* Escreva um programa que leia o nome e a nota de um aluno e exiba sua situação na disciplina. Se a nota for maior ou igual a 7, o aluno está aprovado. Caso contrário, está em recuperação. */
-
-    let nomeAluno = prompt("DIgite seu nome: ")
-    let notaAluno = parseFloat(prompt("Digite sua nota: "))
-
-    if (notaAluno >= 7) {
-        alert(`Aluno ${nomeAluno} esta aprovado.`)
+    if (imc < 18.5) {
+        classificacao = "Abaixo do peso";
+    } else if (imc < 25) {
+        classificacao = "Peso normal";
+    } else if (imc < 30) {
+        classificacao = "Sobrepeso";
+    } else if (imc < 35) {
+        classificacao = "Obesidade grau I";
+    } else if (imc < 40) {
+        classificacao = "Obesidade grau II";
+    } else {
+        classificacao = "Obesidade grau III";
     }
 
-    else {
-        alert(`Aluno ${nomeAluno} esta reprovado.`)
+    alert(`Seu IMC é ${imc.toFixed(2)}\nClassificação: ${classificacao}`);
+}
+btnEx14.addEventListener('click', ex14)
+
+function ex15() {
+    const nome = prompt("Digite o nome do aluno:");
+    const nota = parseFloat(prompt("Digite a nota do aluno:"));
+
+    if (nota >= 7) {
+        alert("Está APROVADO!");
+    } else {
+        alert("Está em RECUPERAÇÃO!");
+    }
+}
+btnEx15.addEventListener('click', ex15)
+
+function ex16() {
+    const quantidade = parseInt(prompt("Digite o número de maçãs compradas:"));
+    let precoPorMaca;
+
+    if (quantidade < 12) {
+        precoPorMaca = 0.50;
+    } else {
+        precoPorMaca = 0.40;
     }
 
-})
+    const total = quantidade * precoPorMaca;
 
-butao16.addEventListener('click', () => {
-    /* Crie um programa que leia o número de maçãs compradas e exiba o valor total a ser pago. O preço das maçãs é de R$ 0,50 cada se a quantidade for menor que 12 e R$ 0,40 cada se a quantidade for igual ou maior que 12. */
+    alert("Total a pagar: " + total);
 
-    let quantidadeMacas = prompt("Digite a quantidade de maçãs que comprou: ")
-    let precoMacas = 0
+}
+btnEx16.addEventListener('click', ex16)
 
-    if (quantidadeMacas < 12) {
-        precoMacas = 0.50
+function ex17() {
+    const salarioMinimo = parseFloat(prompt("Digite o valor do salário mínimo (R$):"));
+    const salarioFuncionario = parseFloat(prompt("Digite o salário do funcionário (R$):"));
+
+    const quantidade = salarioFuncionario / salarioMinimo;
+
+    alert("O funcionário recebe: " + quantidade);
+}
+btnEx17.addEventListener('click', ex17)
+
+function ex18() {
+    const nome = prompt("Digite o nome do aluno:");
+    const turno = prompt("Digite o turno (M para Matutino ou V para Vespertino):")
+
+    if (turno === "M") {
+        alert("Bom dia, " + nome);
+    } else if (turno === "V") {
+        alert("Boa tarde, " + nome);
     }
+}
+btnEx18.addEventListener('click', ex18)
 
-    else {
-        precoMacas = 0.40
+function ex19() {
+    const idade = parseInt(prompt("Digite sua idade:"));
+
+    if (idade >= 18 && idade <= 70) {
+        alert("O voto é OBRIGATÓRIO.");
+    } else if ((idade >= 16 && idade < 18) || idade > 70) {
+        alert("O voto é FACULTATIVO.");
+    } else {
+        alert("Você AINDA NÃO PODE votar.");
     }
+}
+btnEx19.addEventListener('click', ex19)
 
-    let precoTotal = quantidadeMacas * precoMacas
+function ex20() {
+    const num1 = parseInt(prompt("Digite o primeiro número:"));
+    const num2 = parseInt(prompt("Digite o segundo número:"));
+    const num3 = parseInt(prompt("Digite o terceiro número:"));
 
-    alert(`O valor de ${quantidadeMacas} maçãs e de ${precoTotal.toFixed(2)}`)
-
-})
-
-butao17.addEventListener('click', () => {
-    /*Faça um programa que leia o valor do salário mínimo e o salário de um funcionário, e exiba quantos salários mínimos ele recebe.*/
-
-    let salarioMinimo = parseFloat(prompt("Digite o valor do salário minímo: "))
-    let salarioAtual = parseFloat(prompt("Digite seu salário atual: "))
-
-    let quantidadeSalarioMinimo = salarioAtual / salarioMinimo
-
-    alert(`Salário mínimo é ${salarioMinimo}, seu salário atual é ${salarioAtual} e você recebe ${quantidadeSalarioMinimo} salários mínimos.`)
-})
-
-butao18.addEventListener('click', () => {
-    /*Crie um programa que leia o nome e o turno (M ou V) de um aluno e exiba uma mensagem de saudação de acordo com o turno. Matutino: "Bom dia, aluno", Vespertino: "Boa tarde, aluno".*/
-
-    let nomeAluno = prompt("Digite seu nome: ")
-    let turno = prompt("Digite o seu turno: ")
-
-    let turnoGrande = turno.toLocaleUpperCase()
-
-    if (turnoGrande == "M" || turnoGrande == "MATUTINO") {
-        alert(`Bom dia ${nomeAluno}`)
-    }
-
-    else if (turnoGrande == "V" || turnoGrande == "VESPERTINO") {
-        alert(`Boa Tarde ${nomeAluno}`)
-    }
-
-    else {
-        alert("Ocorreu um erro.")
-    }
-
-})
-
-butao19.addEventListener('click', () => {
-    /* Faça um programa que leia a idade de uma pessoa e exiba se ela pode ou não votar. O voto é obrigatório para pessoas entre 18 e 70 anos, e facultativo para pessoas entre 16 e 18 anos e com mais de 70 anos. */
-
-    let idade = parseInt(prompt("Digite sua idade: "))
-
-    if (idade < 16) {
-        alert("Não pode votar.")
-    }
-
-    else if (idade < 18 || idade > 70) {
-        alert("Opcional votar.")
-    }
-
-    else {
-        alert("Obrigatório votar.")
-    }
-
-})
-
-butao20.addEventListener('click', () => {
-    /*Escreva um programa que leia três números inteiros e exiba a média aritmética. Se a média for maior ou igual a 7, exiba a mensagem "Aprovado", caso contrário, exiba a mensagem "Reprovado".*/
-
-    let numero01 = parseInt(prompt("Digite o primeiro valor: "))
-    let numero02 = parseInt(prompt("Digite o segundo valor: "))
-    let numero03 = parseInt(prompt("Digite o terceiro valor: "))
-
-    let media = (numero01 + numero02 + numero03) / 3
+    const media = (num1 + num2 + num3) / 3;
 
     if (media >= 7) {
-        alert(`Aprovado`)
+        alert("Situação: Aprovado" + media);
+    } else {
+        alert("nSituação: Reprovado" + media);
     }
-
-    else{
-        alert("Reprovado")
-    }
-
-
-})
+}
+btnEx20.addEventListener('click', ex20)
